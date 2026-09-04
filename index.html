@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristopher — Portfolio</title>
+<meta name="description" content="Exploring physics, simulation, and code.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 M6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 M26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M6 24 L6 8 L14 8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+        <path d="M26 8 L26 24 L18 24" stroke="currentColor" stroke-width="2.5" fill="none"/>
+      </svg>
+      <span>Cristopher</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#projects">Projects</a>
+      <a href="#personal">Personal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio · 2026</p>
+        <h1>Exploring physics,<br>simulation, and code.</h1>
+        <p class="hero-lede">
+          I'm Cristopher — I build small tools and simulations to understand how
+          physical systems behave, then write code to make them move.
+        </p>
+        <a class="hero-link" href="#projects">
+          View projects
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <svg class="hero-plot" viewBox="0 0 420 320" aria-hidden="true">
+        <g class="plot-axes" stroke="#2a3138" stroke-width="1">
+          <line x1="30" y1="290" x2="400" y2="290"/>
+          <line x1="30" y1="290" x2="30" y2="20"/>
+        </g>
+        <path class="plot-curve" d="M30 290 C 120 290, 140 40, 220 40 S 340 290, 400 120"
+              fill="none" stroke="#ff9d47" stroke-width="2.5" stroke-linecap="round"/>
+        <circle class="plot-dot" cx="30" cy="290" r="4" fill="#ff9d47"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>A working set of simulations and tools. Replace these with your own — titles, links, and thumbnails all live in <code>index.html</code>.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card is-featured">
+          <div class="project-art">
+            <span class="badge badge-index">01</span>
+            <span class="badge badge-featured">Featured</span>
+            <span class="badge badge-year">2026</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <ellipse cx="100" cy="70" rx="80" ry="34" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="100" cy="70" r="5" fill="currentColor"/>
+              <circle cx="30" cy="70" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Orbital Mechanics Simulator</h3>
+            <p>N-body gravity simulation with adjustable time-step integration.</p>
+            <div class="project-tags"><span>Python</span><span>NumPy</span><span>Simulation</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">02</span>
+            <span class="badge badge-year">2026</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M15 70 q 15 -40 30 0 t 30 0 t 30 0 t 30 0 t 30 0 t 30 0" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Fluid Dynamics Visualizer</h3>
+            <p>Real-time 2D Navier–Stokes solver rendered to canvas.</p>
+            <div class="project-tags"><span>JavaScript</span><span>WebGL</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">03</span>
+            <span class="badge badge-year">2023–2026</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M20 100 L60 100 L75 30 L95 120 L110 60 L125 100 L180 100" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>PID Controller Playground</h3>
+            <p>Tunable control-loop simulator for a simple inverted pendulum.</p>
+            <div class="project-tags"><span>Python</span><span>Control Theory</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">04</span>
+            <span class="badge badge-year">2024</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <g fill="currentColor">
+                <circle cx="40" cy="40" r="4"/><circle cx="80" cy="40" r="4"/><circle cx="120" cy="40" r="4"/><circle cx="160" cy="40" r="4"/>
+                <circle cx="40" cy="70" r="4"/><circle cx="120" cy="70" r="4"/>
+                <circle cx="40" cy="100" r="4"/><circle cx="80" cy="100" r="4"/><circle cx="160" cy="100" r="4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Cellular Automata Sandbox</h3>
+            <p>Interactive rule-based automata explorer, from Conway to Langton's ant.</p>
+            <div class="project-tags"><span>Rust</span><span>WASM</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">05</span>
+            <span class="badge badge-year">2024</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M15 70 h20 M45 70 v-40 M45 30 h20 M65 30 v55 M85 85 h20 M105 85 v-60 M105 25 h20 M125 25 v75 M145 100 h40" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Signal Processing Toolkit</h3>
+            <p>FFT-based filters and a spectrogram viewer for audio signals.</p>
+            <div class="project-tags"><span>Python</span><span>DSP</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">06</span>
+            <span class="badge badge-year">2022</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M15 120 Q 90 10 185 65" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="15" cy="120" r="4" fill="currentColor"/>
+              <circle cx="185" cy="65" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Projectile Trajectory Optimizer</h3>
+            <p>Optimizes launch angle and velocity against drag and wind models.</p>
+            <div class="project-tags"><span>C++</span><span>Optimization</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">07</span>
+            <span class="badge badge-year">2021</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M100 15 L100 60 M70 45 L130 45 M60 90 h80 M75 65 v20 M125 65 v20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="100" cy="15" r="5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Rocket Avionics Board</h3>
+            <p>Custom flight computer with barometric apogee detection and telemetry logging.</p>
+            <div class="project-tags"><span>C</span><span>Embedded</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-art">
+            <span class="badge badge-index">08</span>
+            <span class="badge badge-year">2020</span>
+            <svg viewBox="0 0 200 140" aria-hidden="true">
+              <path d="M20 90 L60 30 L100 90 L140 30 L180 90" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Vibration Testing Rig</h3>
+            <p>Accelerometer-based rig for characterizing resonance in 3D-printed brackets.</p>
+            <div class="project-tags"><span>MATLAB</span><span>Testing</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="personal" id="personal">
+    <div class="wrap personal-inner">
+      <div class="section-head">
+        <h2>Personal</h2>
+        <p>
+          Outside of simulations, I spend time reading about aerospace history,
+          tinkering with small electronics, and running — usually badly, always
+          outdoors. This section is yours to make personal: swap in your own
+          story, photos, or interests.
+        </p>
+      </div>
+
+      <dl class="readout">
+        <div><dt>Based in</dt><dd>Atlanta, GA</dd></div>
+        <div><dt>Studying</dt><dd>Aerospace Engineering</dd></div>
+        <div><dt>Currently</dt><dd>NASA Pathways Intern</dd></div>
+        <div><dt>Interests</dt><dd>Rocketry, control systems, distance running</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>The fastest way to reach me is email. Replace the placeholders below with your own details.</p>
+      </div>
+
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/cristopher-264" target="_blank" rel="noopener">github.com/cristopher-264</a></li>
+        <li><span>LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; <span id="year"></span> Cristopher</span>
+    <span>Built with HTML &amp; CSS, hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
