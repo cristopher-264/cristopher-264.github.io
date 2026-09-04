@@ -511,3 +511,5 @@ section{ padding: 88px 0; }
 
   .footer-inner{ flex-direction: column; gap: 6px; }
 }
+
+ .project-art img { width: 100%; height: 100%; object-fit: cover; }
