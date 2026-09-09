@@ -237,23 +237,6 @@ code{
   max-width: 260px;
 }
 
-.hero-resume{
-  margin-top: 20px;
-  color: var(--text-dim);
-  font-size: 1.05rem;
-}
-
-.hero-resume a{
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.hero-resume a:hover,
-.hero-resume a:focus-visible{
-  color: var(--text);
-}
-
 .hero-photo{
   aspect-ratio: 1 / 1;
   border: 1px solid var(--border);
@@ -733,6 +716,23 @@ section{ padding: 88px 0; }
   .footer-inner{ flex-direction: column; gap: 6px; }
 }
 
+.hero-resume{
+  margin-top: 20px;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+}
+
+.hero-resume a{
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-resume a:hover,
+.hero-resume a:focus-visible{
+  color: var(--text);
+}
+
 /* ---------------------------------------------------
    PDF slide viewer
 --------------------------------------------------- */
@@ -755,6 +755,51 @@ section{ padding: 88px 0; }
   display: block;
   border: 1px solid var(--border);
   border-radius: 6px;
+}
+
+.pdf-stage{
+  display: flex;
+  justify-content: center;
+}
+
+.pdf-controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.pdf-nav-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.pdf-nav-btn:hover:not(:disabled),
+.pdf-nav-btn:focus-visible{
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+.pdf-nav-btn:disabled{
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pdf-counter{
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  min-width: 60px;
+  text-align: center;
 }
 
 .pdf-fallback{
