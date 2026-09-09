@@ -733,3 +733,42 @@ section{ padding: 88px 0; }
   .footer-inner{ flex-direction: column; gap: 6px; }
 }
 
+/* ---------------------------------------------------
+   PDF slide viewer
+--------------------------------------------------- */
+.pdf-viewer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pdf-loading{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.pdf-page{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.pdf-fallback{
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  margin-bottom: 56px;
+}
+
+.pdf-fallback a{
+  color: var(--accent);
+}
+
+.pdf-fallback a:hover,
+.pdf-fallback a:focus-visible{
+  text-decoration: underline;
+}
