@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cristopher — Portfolio</title>
-<meta name="description" content="Cristopher Miranda">
+<meta name="description" content="Cristopher Miranda — MIT mechanical engineering senior designing test equipment and procedures that validate space hardware.">
+<meta name="theme-color" content="#0b0d10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cristopher Miranda — Portfolio">
+<meta property="og:description" content="MIT mechanical engineering senior designing test equipment and procedures that validate space hardware.">
+<meta property="og:image" content="https://cristopher-264.github.io/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 M6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 M26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,11 +53,11 @@
         <p class="eyebrow">Portfolio · 2026</p>
         <h1>Cristopher<br>Miranda</h1>
         <p class="hero-lede">
-          My name is Cristopher. I'm a rising senior studying Mechanical
+          My name is Cristopher. I'm a senior studying Mechanical
           Engineering at the Massachusetts Institute of Technology. I design
           testing equipment and procedures that validate space hardware. 
         </p>
-        <p class="hero-resume">Download my resume <a href="files/resume-26.pdf" download>here</a>.</p>
+        <p class="hero-resume">Download my resume <a href="files/resume-26.pdf" download="Cristopher-Miranda-Resume.pdf">here</a>.</p>
         <a class="hero-link" href="#projects">
           View projects
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -59,30 +66,30 @@
 
       <div class="hero-side">
         <div class="hero-photo">
-          <img src="images/profile.jpg" alt="Cristopher Miranda">
+          <img src="images/profile.jpg" alt="Cristopher Miranda" width="1800" height="1200" fetchpriority="high">
         </div>
 
         <p class="hero-side-label">Experience</p>
         <ul class="hero-experience">
           <li>
-            <img class="exp-logo" src="images/vast-logo.png" alt="Vast logo">
+            <img class="exp-logo" src="images/vast-logo.png" width="18" height="18" alt="Vast logo">
             <div class="exp-text">
               <p class="exp-title">Thermal Test Engineering Intern</p>
               <p class="exp-meta">Vast · Summer 2026</p>
             </div>
           </li>
           <li>
-            <img class="exp-logo" src="images/varda-logo.png" alt="Varda logo">
+            <img class="exp-logo" src="images/varda-logo.png" width="18" height="18" alt="Varda logo">
             <div class="exp-text">
               <p class="exp-title">Mechanisms Engineering Intern</p>
               <p class="exp-meta">Varda Space Industries · Spring 2026</p>
             </div>
           </li>
           <li>
-            <img class="exp-logo" src="images/starfish-logo.png" alt="Starfish logo">
+            <img class="exp-logo" src="images/starfish-logo.png" width="18" height="18" alt="Starfish logo">
             <div class="exp-text">
               <p class="exp-title">Thermal Systems Intern</p>
-              <p class="exp-meta">Starfish Space· Summer 2025</p>
+              <p class="exp-meta">Starfish Space · Summer 2025</p>
             </div>
           </li>
         </ul>
@@ -94,115 +101,91 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Projects</h2>
-        <p>A working set of simulations and tools. Replace these with your own — titles, links, and thumbnails all live in <code>index.html</code>.</p>
+        <p>Test equipment, mechanisms, and propulsion hardware I've designed, built, and validated at internships and at MIT. Select a project for the full write-up.</p>
       </div>
 
       <div class="project-grid">
 
         <article class="project-card is-featured">
-          <a class="project-art" href="projects/accumulator-test-stand.html" target="_blank" rel="noopener" aria-label="View Accumulator Test Stand project details">
+          <div class="project-art">
             <span class="badge badge-index">01</span>
             <span class="badge badge-featured">Featured</span>
             <span class="badge badge-year">2026</span>
-            <img src="images/accumulator-test-stand-thumb.jpg" alt="Accumulator Test Stand"> 
-          </a>
+            <img src="images/accumulator-test-stand-thumb.jpg" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Accumulator Test Stand</h3>
+            <h3><a href="projects/accumulator-test-stand.html">Accumulator Test Stand</a></h3>
             <p>Pressurized test stand designed to perform acceptance testing on flight hardware.</p>
             <div class="project-tags"><span>NX</span><span>P&ID</span><span>Beckhoff PLC</span></div>
           </div>
         </article>
 
         <article class="project-card">
-          <a class="project-art" href="projects/random-positioning-machine.html" target="_blank" rel="noopener" aria-label="View Random Positioning Machine project details">
+          <div class="project-art">
             <span class="badge badge-index">02</span>
             <span class="badge badge-year">2026</span>
-            <img src="images/random-positioning-machine-thumb.jpg" alt="Random Positioning Machine"> 
-          </a>
+            <img src="images/random-positioning-machine-thumb.jpg" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Random Positioning Machine</h3>
-            <p>High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution</p>
+            <h3><a href="projects/random-positioning-machine.html">Random Positioning Machine</a></h3>
+            <p>High-accuracy testing rig designed to simulate a reduced-gravity environment for particles in solution.</p>
             <div class="project-tags"><span>MATLAB</span><span>PID Controller Tuning</span><span>Beckhoff PLC</span></div>
           </div>
         </article>
 
         <article class="project-card">
-          <a class="project-art" href="projects/thermal-vacuum-chamber.html" target="_blank" rel="noopener" aria-label="View Thermal Vacuum Chamber project details">
+          <div class="project-art">
             <span class="badge badge-index">03</span>
             <span class="badge badge-year">2025</span>
-            <img src="images/thermal-vacuum-chamber-thumb.png" alt="Thermal Vacuum Chamber"> 
-          </a>
+            <img src="images/thermal-vacuum-chamber-thumb.jpg" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Thermal Vacuum Chamber</h3>
-            <p>Custom build thermal chamber designed to interface with existing vacuum chamber</p>
+            <h3><a href="projects/thermal-vacuum-chamber.html">Thermal Vacuum Chamber</a></h3>
+            <p>Custom-built thermal chamber designed to interface with an existing vacuum chamber.</p>
             <div class="project-tags"><span>Python</span><span>Control Theory</span></div>
           </div>
         </article>
 
         <article class="project-card">
-          <a class="project-art" href="projects/mass-manufactured-yoyo.html" target="_blank" rel="noopener" aria-label="View Yoyo project details">
+          <div class="project-art">
             <span class="badge badge-index">04</span>
             <span class="badge badge-year">2026</span>
-            <img src="images/mass-manufactured-yoyo-thumb.jpg" alt="Mass Manufactured Yoyo"> 
-          </a>
+            <img src="images/mass-manufactured-yoyo-thumb.jpg" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Mass Manufactured Yo-yo</h3>
-            <p>50+ injection molded yo-yos, featuring a press fit and thermoformed parts</p>
+            <h3><a href="projects/mass-manufactured-yoyo.html">Mass Manufactured Yo-yo</a></h3>
+            <p>50+ injection-molded yo-yos, featuring a press fit and thermoformed parts.</p>
             <div class="project-tags"><span>CAM</span><span>Fusion 360</span></div>
           </div>
         </article>
 
         <article class="project-card">
-          <a class="project-art" href="projects/hybrid-rocket-engine.html" target="_blank" rel="noopener" aria-label="View Hybrid Rocket Engine project details">
+          <div class="project-art">
             <span class="badge badge-index">05</span>
             <span class="badge badge-year">2024</span>
-            <img src="images/hybrid-rocket-engine-thumb.png" alt="Hybrid Rocket Engine"> 
-          </a>
+            <img src="images/hybrid-rocket-engine-thumb.png" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Hybrid Rocket Engine</h3>
-            <p>Nitrous Oxide - Paraffin based hybrid rocket engine design made for IREC.</p>
-            <div class="project-tags"><span>FEA</span><span>Bolted Joint Design</span><span>CAD(SOLIDWORKS)</span></div>
+            <h3><a href="projects/hybrid-rocket-engine.html">Hybrid Rocket Engine</a></h3>
+            <p>Nitrous oxide / paraffin hybrid rocket engine designed for IREC.</p>
+            <div class="project-tags"><span>FEA</span><span>Bolted Joint Design</span><span>SOLIDWORKS</span></div>
           </div>
         </article>
 
         <article class="project-card">
-          <a class="project-art" href="projects/solid-rocket-motor.html" target="_blank" rel="noopener" aria-label="View Solid Rocket Motor project details">
+          <div class="project-art">
             <span class="badge badge-index">06</span>
             <span class="badge badge-year">2023-2024</span>
-            <img src="images/solid-rocket-motor-thumb.png" alt="Solid Rocket Motor"> 
-          </a>
+            <img src="images/solid-rocket-motor-thumb.jpg" alt="" loading="lazy"> 
+          </div>
           <div class="project-body">
-            <h3>Solid Rocket Motor</h3>
+            <h3><a href="projects/solid-rocket-motor.html">Solid Rocket Motor</a></h3>
             <p>O-class solid rocket motor designed for IREC 2024.</p>
             <div class="project-tags"><span>C++</span><span>Optimization</span></div>
           </div>
         </article>
 
-        <article class="project-card">
-          <a class="project-art" href="projects/project-7.html" target="_blank" rel="noopener" aria-label="View ___ project details">
-            <span class="badge badge-index">07</span>
-            <span class="badge badge-year">2023-2024</span>
-            <img src="images/project-7.png" alt="Project 7"> 
-          </a>
-          <div class="project-body">
-            <h3>Project 7</h3>
-            <p>Insert description here.</p>
-            <div class="project-tags"><span>C</span><span>Embedded</span></div>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <a class="project-art" href="projects/project-8.html" target="_blank" rel="noopener" aria-label="View ___ project details">
-            <span class="badge badge-index">08</span>
-            <span class="badge badge-year">2023-2024</span>
-            <img src="images/project-8.png" alt="Project 8"> 
-          </a>
-          <div class="project-body">
-            <h3>Project 8</h3>
-            <p>Insert descriotion HREE</p>
-            <div class="project-tags"><span>MATLAB</span><span>Testing</span></div>
-          </div>
-        </article>
 
       </div>
     </div>

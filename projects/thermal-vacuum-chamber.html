@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thermal Vacuum Chamber — Cristopher</title>
-<meta name="description" content="Custom build thermal chamber designed to interface with existing vacuum chamber.">
+<meta name="description" content="Custom-built thermal chamber designed to interface with an existing vacuum chamber.">
+<meta name="theme-color" content="#0b0d10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thermal Vacuum Chamber — Cristopher">
+<meta property="og:description" content="Custom-built thermal chamber designed to interface with an existing vacuum chamber.">
+<meta property="og:image" content="https://cristopher-264.github.io/images/thermal-vacuum-chamber-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,24 +57,24 @@
         <div class="project-tags"><span>Python</span><span>Control Theory</span></div>
       </div>
       <h1>Thermal Vacuum Chamber</h1>
-      <p class="lede">Custom build thermal chamber designed to interface with existing vacuum chamber.</p>
+      <p class="lede">Custom-built thermal chamber designed to interface with an existing vacuum chamber.</p>
     </div>
 
     <div class="project-hero-photo">
-      <img src="../images/thermal-vacuum-chamber-hero.png" alt="Thermal Vacuum Chamber">
+      <img src="../images/thermal-vacuum-chamber-hero.jpg" alt="Thermal Vacuum Chamber">
     </div>
 
     <div class="prose">
       <p>Environmental testing is expensive, not to mention time consuming. This is especially true when a company lacks the resources
         to vertically integrate their testing due to a lack of space, or resources. I set out to tackle this problem at Starfish Space by 
         designing a cost-effective TVAC by interfacing with the existing ideal-Vac chamber to give control over temperature and pressure for
-        small to medium-sized test articles. All in, the project cost around $5,000, and took around 3 months. Thanks ebay (cheap), McMaster (fast),
+        small to medium-sized test articles. All in, the project cost around $5,000, and took around 3 months. Thanks eBay (cheap), McMaster (fast),
         and Amazon (abundant)!
 
       </p>
       <p>This system uses a tiered heating and cooling system to achieve temperatures ~-30C to +100C. On the cold side, a chiller circulates through
-        a two liquid cooled plates in series. The chiller I found cost ~$1k on ebay, and had a cooling capacity of ~1 kW at -5C. The cooled plates were
-        used to dissipate the heat from the hot side of 10 thermoelectric coolers (TECs) in two parallel branches of five units. PEEK screws were to 
+        two liquid-cooled plates in series. The chiller I found cost ~$1k on eBay, and had a cooling capacity of ~1 kW at -5C. The cooled plates were
+        used to dissipate the heat from the hot side of 10 thermoelectric coolers (TECs) in two parallel branches of five units. PEEK screws were used to 
         sandwich the TECs between the cooled plates (hot side of TEC) and a mounting plate (cold side of TEC). The effective temperature difference
         across the TEC was around 25-30C. This meant the mounting plate reached approximately -30C. I created a 50mm grid of .25-20 holes for mounting test articles. 
         I used a bang-bang control scheme through a set of serial relays to open and close a high power solid state relays. This was controlled by a TC
@@ -76,7 +82,7 @@
       </p>
       <p>Thermal contact was definitely the biggest issue I dealt with. The TECs were hard to compress evenly, and getting the right amount of thermal paste on each
         surface was a huge challenge. On one side, insufficient paste meant poor contact and potential thermal runaway. On the other side, too much paste would increase
-        the thermal resistance at the boundary, which exponentially decreased the systems efficiency. I was able to diagnose this issue by comparing the expected
+        the thermal resistance at the boundary, which exponentially decreased the system's efficiency. I was able to diagnose this issue by comparing the expected
         vs actual power draw at nominal voltage. Specifically, a TEC with poor contact will draw lower current at the same voltage if the thermal resistance is higher than calculated.  </p>
       <div class="pdf-viewer" data-pdf="../files/thermal-vacuum-chamber-deck.pdf">
         <p class="pdf-loading">Loading slides…</p>
@@ -90,15 +96,15 @@
     <div class="photo-gallery">
       <figure>
         <div class="gallery-placeholder">
-          <img src="../images/thermal-vacuum-chamber-1.png" alt="...">
+          <img src="../images/thermal-vacuum-chamber-1.jpg" alt="Thermal chamber installed inside the vacuum chamber, with thermocouple wiring" loading="lazy">
         </div>
-        <figcaption>Add a caption here</figcaption>
+        <figcaption>Thermal chamber installed inside the existing vacuum chamber</figcaption>
       </figure>
       <figure>
         <div class="gallery-placeholder">
-          <img src="../images/thermal-vacuum-chamber-2.png" alt="...">
+          <img src="../images/thermal-vacuum-chamber-2.png" alt="Temperature plot showing a cold soak near minus 25 C ramping to a hot soak at 75 C" loading="lazy">
         </div>
-        <figcaption>Add a caption here</figcaption>
+        <figcaption>Test-article thermocouple during a cold soak near −25 °C and a hot soak at +75 °C</figcaption>
       </figure>
     </div>
 
@@ -113,7 +119,7 @@
 </footer>
 
 <script src="../script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="../pdf-viewer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script src="../pdf-viewer.js" defer></script>
 </body>
 </html>
