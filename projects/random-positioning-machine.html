@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Positioning Machine — Cristopher</title>
-<meta name="description" content="High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution.">
+<meta name="description" content="High-accuracy testing rig designed to simulate a reduced-gravity environment for particles in solution.">
+<meta name="theme-color" content="#0b0d10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Random Positioning Machine — Cristopher">
+<meta property="og:description" content="High-accuracy testing rig designed to simulate a reduced-gravity environment for particles in solution.">
+<meta property="og:image" content="https://cristopher-264.github.io/images/random-positioning-machine-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +57,7 @@
         <div class="project-tags"><span>MATLAB</span><span>PID Controller Tuning</span><span>Beckhoff PLC</span></div>
       </div>
       <h1>Random Positioning Machine</h1>
-      <p class="lede">High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution.</p>
+      <p class="lede">High-accuracy testing rig designed to simulate a reduced-gravity environment for particles in solution.</p>
     </div>
 
     <div class="project-hero-photo">
@@ -59,10 +65,10 @@
     </div>
 
     <div class="prose">
-      <p>Varda is an ambitious company that aims to bring materials manfactured in space back to Earth.
+      <p>Varda is an ambitious company that aims to bring materials manufactured in space back to Earth.
         This is achieved through a hypersonic reentry capsule that reenters the atmosphere at Mach 25+, 
         and makes a smooth landing in the desert. Past Varda payloads have mostly been sensors and pharmaceuticals. 
-        My project focuses on the latter. I designed a random positionig machine (RPM), a two-axis gimbaling 
+        My project focuses on the latter. I designed a random positioning machine (RPM), a two-axis gimbaling 
         mechanism that simulates microgravity through the process of gravity vector averaging. Basically, if you spin 
         an object at the right speed, the object may experience a reduced gravity environment. This is meaningful for 
         Varda because it can be used as a screener for pharmaceuticals that exhibit favorable characteristics in
@@ -83,8 +89,9 @@
 
       <p>In the end, I was able to achieve around a 14x reduction in the time averaged gravity vector. Although this does not qualify as true
         microgravity, it does provide some useful data for steps moving forward.</p>
+      <div class="video-row">
         <div class="video-embed">
-          <iframe
+          <iframe loading="lazy"
             src="https://www.youtube.com/embed/-Ax2gf1RBpI"
             title="Random Positioning Machine particles in solution close up"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -92,14 +99,15 @@
           </iframe>
         </div>
         <div class="video-embed">
-          <iframe
+          <iframe loading="lazy"
             src="https://www.youtube.com/embed/zn1gW1rzUyA"
             title="Random Positioning Machine demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
         </div>
-      <div class="pdf-viewer" data-pdf="../files/random-positioning-machine.pdf">
+      </div>
+      <div class="pdf-viewer" data-pdf="../files/random-positioning-machine-deck.pdf">
         <p class="pdf-loading">Loading slides…</p>
       </div>
       <p class="pdf-fallback">
@@ -111,15 +119,15 @@
     <div class="photo-gallery">
       <figure>
         <div class="gallery-placeholder">
-          <img src="../images/random-positioning-machine-1.jpg" alt="...">
+          <img src="../images/random-positioning-machine-1.jpg" alt="Electrical cabinet housing the Beckhoff PLC and I/O cards" loading="lazy">
         </div>
         <figcaption>Electrical cabinet with PLCs. Super oversized, I know.</figcaption>
       </figure>
       <figure>
         <div class="gallery-placeholder">
-          <img src="../images/random-positioning-machine-2.png" alt="...">
+          <img src="../images/random-positioning-machine-2.png" alt="Plot of motor speeds versus time during commissioning and PID tuning" loading="lazy">
         </div>
-        <figcaption>Motor speeds vs. time during comissioning and PID tuning</figcaption>
+        <figcaption>Motor speeds vs. time during commissioning and PID tuning</figcaption>
       </figure>
     </div>
 
@@ -134,7 +142,7 @@
 </footer>
 
 <script src="../script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="../pdf-viewer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script src="../pdf-viewer.js" defer></script>
 </body>
 </html>
