@@ -20,7 +20,7 @@
 }
 
 *{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; scroll-padding-top: 84px; }
 
 body{
   margin: 0;
@@ -132,7 +132,8 @@ code{
 }
 
 .primary-nav a:hover,
-.primary-nav a:focus-visible{
+.primary-nav a:focus-visible,
+.primary-nav a.is-active{
   color: var(--text);
   border-color: var(--accent);
 }
@@ -336,23 +337,42 @@ section{ padding: 88px 0; }
 --------------------------------------------------- */
 .project-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
 }
 
 .project-card{
+  position: relative;
   background: var(--bg-alt);
   display: flex;
   flex-direction: column;
   transition: background 0.15s ease;
 }
 
-.project-card:hover{ background: var(--surface); }
+.project-card:hover,
+.project-card:focus-within{ background: var(--surface); }
+
+.project-card h3 a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Stretch the title link over the whole card */
+.project-card h3 a::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-card h3 a:focus-visible{ outline: none; }
+.project-card:focus-within{ outline: 2px solid var(--accent); outline-offset: -2px; }
 
 .project-art{
   position: relative;
+  overflow: hidden;
   color: var(--text-faint);
   aspect-ratio: 4 / 3;
   background:
@@ -368,9 +388,10 @@ section{ padding: 88px 0; }
 }
 
 .project-card:hover .project-art,
-.project-art:focus-visible{ color: var(--accent); }
+.project-card:focus-within .project-art{ color: var(--accent); }
 
-.project-art{ text-decoration: none; }
+.project-art img{ transition: transform 0.4s ease; }
+.project-card:hover .project-art img{ transform: scale(1.03); }
 
 .project-art svg{ width: 100%; height: 100%; }
 
@@ -612,6 +633,7 @@ section{ padding: 88px 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .project-hero-photo svg{ width: 25%; height: 25%; }
@@ -733,6 +755,18 @@ section{ padding: 88px 0; }
   color: var(--text);
 }
 
+.wip-note{
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  padding: 18px 20px;
+  background: var(--surface);
+}
+
+.wip-note a{ color: var(--accent); }
+
 /* ---------------------------------------------------
    PDF slide viewer
 --------------------------------------------------- */
@@ -747,6 +781,7 @@ section{ padding: 88px 0; }
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-faint);
+  padding: 24px 0;
 }
 
 .pdf-page{
@@ -821,6 +856,15 @@ section{ padding: 88px 0; }
 /* ---------------------------------------------------
    Vertical video embed (e.g. YouTube Shorts)
 --------------------------------------------------- */
+.video-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.video-row .video-embed{ flex: 1 1 240px; margin-bottom: 0; }
+
 .video-embed{
   aspect-ratio: 9 / 16;
   max-width: 340px;
