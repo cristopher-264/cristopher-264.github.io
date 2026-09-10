@@ -3,123 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thermal Vacuum Chamber — Cristopher</title>
-<meta name="description" content="Custom-built thermal chamber designed to interface with an existing vacuum chamber.">
-<meta name="theme-color" content="#0b0d10">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Thermal Vacuum Chamber — Cristopher">
-<meta property="og:description" content="Custom-built thermal chamber designed to interface with an existing vacuum chamber.">
-<meta property="og:image" content="https://cristopher-264.github.io/images/thermal-vacuum-chamber-hero.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Thermal Vacuum Chamber — Cristopher Miranda</title>
+<meta name="description" content="Custom-built thermal chamber that fits inside an existing vacuum chamber.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="../index.html#top">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M6 24 L6 8 L14 8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-        <path d="M26 8 L26 24 L18 24" stroke="currentColor" stroke-width="2.5" fill="none"/>
-      </svg>
-      <span>Cristopher</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="primary-nav" id="primaryNav">
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#personal">Personal</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-  </div>
+<header class="top">
+  <a href="../index.html">Cristopher Miranda</a>
+  <nav>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../files/resume-26.pdf">Resume</a>
+  </nav>
 </header>
 
-<main id="main" class="project-page-main">
-  <div class="wrap">
+<main>
 
-    <a class="back-link" href="../index.html#projects">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H4M8 3 3 8l5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      All projects
-    </a>
+  <a class="back" href="../index.html">← All projects</a>
 
-    <div class="project-page-head">
-      <div class="project-meta">
-        <span class="badge badge-year">2025</span>
-        <div class="project-tags"><span>Python</span><span>Control Theory</span></div>
-      </div>
-      <h1>Thermal Vacuum Chamber</h1>
-      <p class="lede">Custom-built thermal chamber designed to interface with an existing vacuum chamber.</p>
-    </div>
+  <h1>Thermal Vacuum Chamber</h1>
+  <p class="lede">Custom-built thermal chamber that fits inside an existing vacuum chamber.</p>
+  <small class="meta">2025 · Starfish Space · Python, control theory</small>
 
-    <div class="project-hero-photo">
-      <img src="../images/thermal-vacuum-chamber-hero.jpg" alt="Thermal Vacuum Chamber">
-    </div>
+  <img class="hero-image" src="../images/thermal-vacuum-chamber-hero.jpg" alt="Thermal Vacuum Chamber">
 
-    <div class="prose">
-      <p>Environmental testing is expensive, not to mention time consuming. This is especially true when a company lacks the resources
-        to vertically integrate their testing due to a lack of space, or resources. I set out to tackle this problem at Starfish Space by 
-        designing a cost-effective TVAC by interfacing with the existing ideal-Vac chamber to give control over temperature and pressure for
-        small to medium-sized test articles. All in, the project cost around $5,000, and took around 3 months. Thanks eBay (cheap), McMaster (fast),
-        and Amazon (abundant)!
-
-      </p>
-      <p>This system uses a tiered heating and cooling system to achieve temperatures ~-30C to +100C. On the cold side, a chiller circulates through
-        two liquid-cooled plates in series. The chiller I found cost ~$1k on eBay, and had a cooling capacity of ~1 kW at -5C. The cooled plates were
-        used to dissipate the heat from the hot side of 10 thermoelectric coolers (TECs) in two parallel branches of five units. PEEK screws were used to 
-        sandwich the TECs between the cooled plates (hot side of TEC) and a mounting plate (cold side of TEC). The effective temperature difference
-        across the TEC was around 25-30C. This meant the mounting plate reached approximately -30C. I created a 50mm grid of .25-20 holes for mounting test articles. 
-        I used a bang-bang control scheme through a set of serial relays to open and close a high power solid state relays. This was controlled by a TC
-        attached securely to a test article. 
-      </p>
-      <p>Thermal contact was definitely the biggest issue I dealt with. The TECs were hard to compress evenly, and getting the right amount of thermal paste on each
-        surface was a huge challenge. On one side, insufficient paste meant poor contact and potential thermal runaway. On the other side, too much paste would increase
-        the thermal resistance at the boundary, which exponentially decreased the system's efficiency. I was able to diagnose this issue by comparing the expected
-        vs actual power draw at nominal voltage. Specifically, a TEC with poor contact will draw lower current at the same voltage if the thermal resistance is higher than calculated.  </p>
-      <div class="pdf-viewer" data-pdf="../files/thermal-vacuum-chamber-deck.pdf">
-        <p class="pdf-loading">Loading slides…</p>
-      </div>
-      <p class="pdf-fallback">
-        <a href="../files/thermal-vacuum-chamber-deck.pdf" target="_blank" rel="noopener">Open the full PDF in a new tab</a>
-      </p>     
-      
-    </div>
-
-    <div class="photo-gallery">
-      <figure>
-        <div class="gallery-placeholder">
-          <img src="../images/thermal-vacuum-chamber-1.jpg" alt="Thermal chamber installed inside the vacuum chamber, with thermocouple wiring" loading="lazy">
-        </div>
-        <figcaption>Thermal chamber installed inside the existing vacuum chamber</figcaption>
-      </figure>
-      <figure>
-        <div class="gallery-placeholder">
-          <img src="../images/thermal-vacuum-chamber-2.png" alt="Temperature plot showing a cold soak near minus 25 C ramping to a hot soak at 75 C" loading="lazy">
-        </div>
-        <figcaption>Test-article thermocouple during a cold soak near −25 °C and a hot soak at +75 °C</figcaption>
-      </figure>
-    </div>
-
+  <div class="prose">
+    <p>Environmental testing is expensive, not to mention time consuming. This is especially true when a company lacks the resources to vertically integrate their testing due to a lack of space, or resources. I set out to tackle this problem at Starfish Space by designing a cost-effective TVAC by interfacing with the existing ideal-Vac chamber to give control over temperature and pressure for small to medium-sized test articles. All in, the project cost around $5,000, and took around 3 months. Thanks eBay (cheap), McMaster (fast), and Amazon (abundant)!</p>
+    <p>This system uses a tiered heating and cooling system to achieve temperatures ~-30C to +100C. On the cold side, a chiller circulates through two liquid-cooled plates in series. The chiller I found cost ~$1k on eBay, and had a cooling capacity of ~1 kW at -5C. The cooled plates were used to dissipate the heat from the hot side of 10 thermoelectric coolers (TECs) in two parallel branches of five units. PEEK screws were used to sandwich the TECs between the cooled plates (hot side of TEC) and a mounting plate (cold side of TEC). The effective temperature difference across the TEC was around 25-30C. This meant the mounting plate reached approximately -30C. I created a 50mm grid of .25-20 holes for mounting test articles. I used a bang-bang control scheme through a set of serial relays to open and close a high power solid state relays. This was controlled by a TC attached securely to a test article.</p>
+    <p>Thermal contact was definitely the biggest issue I dealt with. The TECs were hard to compress evenly, and getting the right amount of thermal paste on each surface was a huge challenge. On one side, insufficient paste meant poor contact and potential thermal runaway. On the other side, too much paste would increase the thermal resistance at the boundary, which exponentially decreased the system's efficiency. I was able to diagnose this issue by comparing the expected vs actual power draw at nominal voltage. Specifically, a TEC with poor contact will draw lower current at the same voltage if the thermal resistance is higher than calculated.</p>
+    <p><a href="../files/thermal-vacuum-chamber-deck.pdf">Slides (PDF) ↗</a></p>
   </div>
+
+  <div class="gallery">
+    <figure>
+      <img src="../images/thermal-vacuum-chamber-1.jpg" alt="Thermal chamber installed inside the vacuum chamber, with thermocouple wiring" loading="lazy">
+      <figcaption>Thermal chamber installed inside the existing vacuum chamber</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/thermal-vacuum-chamber-2.png" alt="Temperature plot showing a cold soak near minus 25 C ramping to a hot soak at 75 C" loading="lazy">
+      <figcaption>Test-article thermocouple during a cold soak near −25 °C and a hot soak at +75 °C</figcaption>
+    </figure>
+  </div>
+
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Cristopher</span>
-    <span>Built with HTML &amp; CSS, hosted on GitHub Pages</span>
-  </div>
-</footer>
 
-<script src="../script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
-<script src="../pdf-viewer.js" defer></script>
+
 </body>
 </html>
