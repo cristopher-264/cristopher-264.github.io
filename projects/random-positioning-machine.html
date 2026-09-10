@@ -3,138 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Random Positioning Machine — Cristopher</title>
-<meta name="description" content="High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Random Positioning Machine — Cristopher Miranda</title>
+<meta name="description" content="Two-axis gimbal that simulates reduced gravity for particles in solution.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="../index.html#top">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M6 24 L6 8 L14 8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-        <path d="M26 8 L26 24 L18 24" stroke="currentColor" stroke-width="2.5" fill="none"/>
-      </svg>
-      <span>Cristopher</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="primary-nav" id="primaryNav">
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#personal">Personal</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-  </div>
+<header class="top">
+  <a href="../index.html">Cristopher Miranda</a>
+  <nav>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../files/resume-26.pdf">Resume</a>
+  </nav>
 </header>
 
-<main id="main" class="project-page-main">
-  <div class="wrap">
+<main>
 
-    <a class="back-link" href="../index.html#projects">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H4M8 3 3 8l5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      All projects
-    </a>
+  <a class="back" href="../index.html">← All projects</a>
 
-    <div class="project-page-head">
-      <div class="project-meta">
-        <span class="badge badge-year">2026</span>
-        <div class="project-tags"><span>MATLAB</span><span>PID Controller Tuning</span><span>Beckhoff PLC</span></div>
-      </div>
-      <h1>Random Positioning Machine</h1>
-      <p class="lede">High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution.</p>
+  <h1>Random Positioning Machine</h1>
+  <p class="lede">Two-axis gimbal that simulates reduced gravity for particles in solution.</p>
+  <small class="meta">2026 · Varda Space Industries · MATLAB, PID tuning, Beckhoff PLC</small>
+
+  <img class="hero-image" src="../images/random-positioning-machine-hero.jpg" alt="Random Positioning Machine">
+
+  <div class="prose">
+    <p>Varda is an ambitious company that aims to bring materials manufactured in space back to Earth. This is achieved through a hypersonic reentry capsule that reenters the atmosphere at Mach 25+, and makes a smooth landing in the desert. Past Varda payloads have mostly been sensors and pharmaceuticals. My project focuses on the latter. I designed a random positioning machine (RPM), a two-axis gimbaling mechanism that simulates microgravity through the process of gravity vector averaging. Basically, if you spin an object at the right speed, the object may experience a reduced gravity environment. This is meaningful for Varda because it can be used as a screener for pharmaceuticals that exhibit favorable characteristics in microgravity (larger crystals, even structure, etc.), and act as a quasistatic reference for drugs made in space. Specifically, if a drug creates the same polymorph in the RPM as in true microgravity (i.e. in the capsule sent to space), the effects are likely achieved by other factors such as reduced sedimentation which can be achieved on Earth.</p>
+    <p>This design works by spinning two perpendicular frames using BLDC motors. Each motor is programmed to spin independently of the other, which is important for achieving true random motion. In reality however, the motors are somewhat coupled due to the effects of gravity and the heavy rotating mass. The motors are controlled using a Beckhoff Embedded PC (CX5340) running TwinCAT/BSD, which controls a coupler (EK1200), digital output (EL2008), IMU and motor driver (EK1100). Power and signal are transmitted through a series of sliprings, each containing a single 10A circuit at 48V (motors draw 4.6A nominally), and an ethernet connection for EtherCAT comms. The power is distributed through a terminal block to the input poles on the driver, and a buck converter that steps the voltage down to 24V for the coupler and connected cards. Yes, you heard that right... The cards are on the rotating frame! This decision was driven by the availability of cheap and low leadtime sliprings and scalability of the system (i.e. adding new sensors is easy since it requires no additional circuits through the slipring). However, it also added many challenges since the rotating cards made the system unbalanced. When the time came to tune the motors, I ran into a ton of issues trying to find the correct P and I gains for the PID controller.</p>
+    <p>In the end, I was able to achieve around a 14x reduction in the time averaged gravity vector. Although this does not qualify as true microgravity, it does provide some useful data for steps moving forward.</p>
+    <div class="videos">
+      <iframe loading="lazy" src="https://www.youtube.com/embed/-Ax2gf1RBpI" title="Random Positioning Machine particles in solution close up" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe loading="lazy" src="https://www.youtube.com/embed/zn1gW1rzUyA" title="Random Positioning Machine demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-
-    <div class="project-hero-photo">
-      <img src="../images/random-positioning-machine-hero.jpg" alt="Random Positioning Machine"> 
-    </div>
-
-    <div class="prose">
-      <p>Varda is an ambitious company that aims to bring materials manfactured in space back to Earth.
-        This is achieved through a hypersonic reentry capsule that reenters the atmosphere at Mach 25+, 
-        and makes a smooth landing in the desert. Past Varda payloads have mostly been sensors and pharmaceuticals. 
-        My project focuses on the latter. I designed a random positionig machine (RPM), a two-axis gimbaling 
-        mechanism that simulates microgravity through the process of gravity vector averaging. Basically, if you spin 
-        an object at the right speed, the object may experience a reduced gravity environment. This is meaningful for 
-        Varda because it can be used as a screener for pharmaceuticals that exhibit favorable characteristics in
-        microgravity (larger crystals, even structure, etc.), and act as a quasistatic reference for drugs made in space. 
-        Specifically, if a drug creates the same polymorph in the RPM as in true microgravity (i.e. in the capsule sent to 
-        space), the effects are likely achieved by other factors such as reduced sedimentation which can be achieved on Earth.</p>
-
-      <p>This design works by spinning two perpendicular frames using BLDC motors. Each motor is programmed to spin independently 
-        of the other, which is important for achieving true random motion. In reality however, the motors are somewhat coupled due to the
-        effects of gravity and the heavy rotating mass. The motors are controlled using a Beckhoff Embedded PC (CX5340) running TwinCAT/BSD,
-        which controls a coupler (EK1200), digital output (EL2008), IMU and motor driver (EK1100). Power and signal are transmitted through a 
-        series of sliprings, each containing a single 10A circuit at 48V (motors draw 4.6A nominally), and an ethernet connection for EtherCAT comms.
-        The power is distributed through a terminal block to the input poles on the driver, and a buck converter that steps the voltage down to 24V
-        for the coupler and connected cards. Yes, you heard that right... The cards are on the rotating frame! This decision was driven by the availability
-        of cheap and low leadtime sliprings and scalability of the system (i.e. adding new sensors is easy since it requires no additional circuits
-        through the slipring). However, it also added many challenges since the rotating cards made the system unbalanced. When the time came to tune the motors,
-        I ran into a ton of issues trying to find the correct P and I gains for the PID controller.</p>
-
-      <p>In the end, I was able to achieve around a 14x reduction in the time averaged gravity vector. Although this does not qualify as true
-        microgravity, it does provide some useful data for steps moving forward.</p>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/-Ax2gf1RBpI"
-            title="Random Positioning Machine particles in solution close up"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/zn1gW1rzUyA"
-            title="Random Positioning Machine demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-      <div class="pdf-viewer" data-pdf="../files/random-positioning-machine.pdf">
-        <p class="pdf-loading">Loading slides…</p>
-      </div>
-      <p class="pdf-fallback">
-        <a href="../files/random-positioning-machine-deck.pdf" target="_blank" rel="noopener">Open the full PDF in a new tab</a>
-      </p>     
-
-    </div>
-
-    <div class="photo-gallery">
-      <figure>
-        <div class="gallery-placeholder">
-          <img src="../images/random-positioning-machine-1.jpg" alt="...">
-        </div>
-        <figcaption>Electrical cabinet with PLCs. Super oversized, I know.</figcaption>
-      </figure>
-      <figure>
-        <div class="gallery-placeholder">
-          <img src="../images/random-positioning-machine-2.png" alt="...">
-        </div>
-        <figcaption>Motor speeds vs. time during comissioning and PID tuning</figcaption>
-      </figure>
-    </div>
-
+    <p><a href="../files/random-positioning-machine-deck.pdf">Slides (PDF) ↗</a></p>
   </div>
+
+  <div class="gallery">
+    <figure>
+      <img src="../images/random-positioning-machine-1.jpg" alt="Electrical cabinet housing the Beckhoff PLC and I/O cards" loading="lazy">
+      <figcaption>Electrical cabinet with PLCs. Super oversized, I know.</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/random-positioning-machine-2.png" alt="Plot of motor speeds versus time during commissioning and PID tuning" loading="lazy">
+      <figcaption>Motor speeds vs. time during commissioning and PID tuning</figcaption>
+    </figure>
+  </div>
+
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Cristopher</span>
-    <span>Built with HTML &amp; CSS, hosted on GitHub Pages</span>
-  </div>
-</footer>
 
-<script src="../script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="../pdf-viewer.js"></script>
+
 </body>
 </html>

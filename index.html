@@ -3,258 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cristopher — Portfolio</title>
-<meta name="description" content="Cristopher Miranda">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d10'/%3E%3Cpath d='M6 24 L6 8 M6 8 L14 8' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3Cpath d='M26 8 L26 24 M26 24 L18 24' stroke='%23ff9d47' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Cristopher Miranda</title>
+<meta name="description" content="Cristopher Miranda — MIT mechanical engineering senior designing test equipment and procedures that validate space hardware.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M6 24 L6 8 L14 8" stroke="currentColor" stroke-width="2.5" fill="none"/>
-        <path d="M26 8 L26 24 L18 24" stroke="currentColor" stroke-width="2.5" fill="none"/>
-      </svg>
-      <span>Cristopher</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="primary-nav" id="primaryNav">
-      <a href="#projects">Projects</a>
-      <a href="#personal">Personal</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<header class="top">
+  <a href="#">Cristopher Miranda</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="files/resume-26.pdf">Resume</a>
+  </nav>
 </header>
 
-<main id="main">
+<main>
 
-  <section class="hero" id="top">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Portfolio · 2026</p>
-        <h1>Cristopher<br>Miranda</h1>
-        <p class="hero-lede">
-          My name is Cristopher. I'm a rising senior studying Mechanical
-          Engineering at the Massachusetts Institute of Technology. I design
-          testing equipment and procedures that validate space hardware. 
-        </p>
-        <p class="hero-resume">Download my resume <a href="files/resume-26.pdf" download>here</a>.</p>
-        <a class="hero-link" href="#projects">
-          View projects
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
+  <p class="intro">Mechanical engineering senior at MIT. I design test equipment and procedures that validate space hardware.</p>
 
-      <div class="hero-side">
-        <div class="hero-photo">
-          <img src="images/profile.jpg" alt="Cristopher Miranda">
-        </div>
+  <ol class="projects">
+    <li>
+      <a href="projects/accumulator-test-stand.html">
+        <img src="images/accumulator-test-stand-thumb.jpg" alt="">
+        <span>
+          <b>Accumulator Test Stand</b>
+          Pressurized test stand for acceptance testing of flight hardware.
+          <small>2026 · Vast</small>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="projects/random-positioning-machine.html">
+        <img src="images/random-positioning-machine-thumb.jpg" alt="">
+        <span>
+          <b>Random Positioning Machine</b>
+          Two-axis gimbal that simulates reduced gravity for particles in solution.
+          <small>2026 · Varda Space Industries</small>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="projects/thermal-vacuum-chamber.html">
+        <img src="images/thermal-vacuum-chamber-thumb.jpg" alt="">
+        <span>
+          <b>Thermal Vacuum Chamber</b>
+          Custom-built thermal chamber that fits inside an existing vacuum chamber.
+          <small>2025 · Starfish Space</small>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="projects/mass-manufactured-yoyo.html">
+        <img src="images/mass-manufactured-yoyo-thumb.jpg" alt="">
+        <span>
+          <b>Mass-Manufactured Yo-yo</b>
+          Fifty-plus injection-molded yo-yos with a press fit and thermoformed parts.
+          <small>2024 · MIT 2.008</small>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="projects/hybrid-rocket-engine.html">
+        <img src="images/hybrid-rocket-engine-thumb.png" alt="">
+        <span>
+          <b>Hybrid Rocket Engine</b>
+          Nitrous oxide and paraffin hybrid engine designed for IREC.
+          <small>2024 · MIT Rocket Team</small>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="projects/solid-rocket-motor.html">
+        <img src="images/solid-rocket-motor-thumb.jpg" alt="">
+        <span>
+          <b>Solid Rocket Motor</b>
+          O-class solid rocket motor designed for IREC 2024.
+          <small>2023 – 2024 · MIT Rocket Team</small>
+        </span>
+      </a>
+    </li>
+  </ol>
 
-        <p class="hero-side-label">Experience</p>
-        <ul class="hero-experience">
-          <li>
-            <img class="exp-logo" src="images/vast-logo.png" alt="Vast logo">
-            <div class="exp-text">
-              <p class="exp-title">Thermal Test Engineering Intern</p>
-              <p class="exp-meta">Vast · Summer 2026</p>
-            </div>
-          </li>
-          <li>
-            <img class="exp-logo" src="images/varda-logo.png" alt="Varda logo">
-            <div class="exp-text">
-              <p class="exp-title">Mechanisms Engineering Intern</p>
-              <p class="exp-meta">Varda Space Industries · Spring 2026</p>
-            </div>
-          </li>
-          <li>
-            <img class="exp-logo" src="images/starfish-logo.png" alt="Starfish logo">
-            <div class="exp-text">
-              <p class="exp-title">Thermal Systems Intern</p>
-              <p class="exp-meta">Starfish Space· Summer 2025</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <section id="about">
+    <h2>About</h2>
+    <img src="images/profile.jpg" alt="Cristopher Miranda">
+    <p>I'm a first-generation college student and first-generation American, born to Mexican immigrant parents. I grew up working construction with my dad, forming and pouring slabs, sidewalks, and driveways. That work pushed me toward the other side of the blueprint: engineering.</p>
+    <p>I've interned at Vast (thermal test engineering, 2026), Varda Space Industries (mechanisms, 2026), and Starfish Space (thermal systems, 2025). I'm based in Norcross, GA, and I'm just under a year from graduating from MIT.</p>
   </section>
 
-  <section class="projects" id="projects">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p>A working set of simulations and tools. Replace these with your own — titles, links, and thumbnails all live in <code>index.html</code>.</p>
-      </div>
-
-      <div class="project-grid">
-
-        <article class="project-card is-featured">
-          <a class="project-art" href="projects/accumulator-test-stand.html" target="_blank" rel="noopener" aria-label="View Accumulator Test Stand project details">
-            <span class="badge badge-index">01</span>
-            <span class="badge badge-featured">Featured</span>
-            <span class="badge badge-year">2026</span>
-            <img src="images/accumulator-test-stand-thumb.jpg" alt="Accumulator Test Stand"> 
-          </a>
-          <div class="project-body">
-            <h3>Accumulator Test Stand</h3>
-            <p>Pressurized test stand designed to perform acceptance testing on flight hardware.</p>
-            <div class="project-tags"><span>NX</span><span>P&ID</span><span>Beckhoff PLC</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/random-positioning-machine.html" target="_blank" rel="noopener" aria-label="View Random Positioning Machine project details">
-            <span class="badge badge-index">02</span>
-            <span class="badge badge-year">2026</span>
-            <img src="images/random-positioning-machine-thumb.jpg" alt="Random Positioning Machine"> 
-          </a>
-          <div class="project-body">
-            <h3>Random Positioning Machine</h3>
-            <p>High accuracy testing rig designed to simulate a reduced gravity environment for particles in solution</p>
-            <div class="project-tags"><span>MATLAB</span><span>PID Controller Tuning</span><span>Beckhoff PLC</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/thermal-vacuum-chamber.html" target="_blank" rel="noopener" aria-label="View Thermal Vacuum Chamber project details">
-            <span class="badge badge-index">03</span>
-            <span class="badge badge-year">2025</span>
-            <img src="images/thermal-vacuum-chamber-thumb.png" alt="Thermal Vacuum Chamber"> 
-          </a>
-          <div class="project-body">
-            <h3>Thermal Vacuum Chamber</h3>
-            <p>Custom build thermal chamber designed to interface with existing vacuum chamber</p>
-            <div class="project-tags"><span>Python</span><span>Control Theory</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/mass-manufactured-yoyo.html" target="_blank" rel="noopener" aria-label="View Yoyo project details">
-            <span class="badge badge-index">04</span>
-            <span class="badge badge-year">2026</span>
-            <img src="images/mass-manufactured-yoyo-thumb.jpg" alt="Mass Manufactured Yoyo"> 
-          </a>
-          <div class="project-body">
-            <h3>Mass Manufactured Yo-yo</h3>
-            <p>50+ injection molded yo-yos, featuring a press fit and thermoformed parts</p>
-            <div class="project-tags"><span>CAM</span><span>Fusion 360</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/hybrid-rocket-engine.html" target="_blank" rel="noopener" aria-label="View Hybrid Rocket Engine project details">
-            <span class="badge badge-index">05</span>
-            <span class="badge badge-year">2024</span>
-            <img src="images/hybrid-rocket-engine-thumb.png" alt="Hybrid Rocket Engine"> 
-          </a>
-          <div class="project-body">
-            <h3>Hybrid Rocket Engine</h3>
-            <p>Nitrous Oxide - Paraffin based hybrid rocket engine design made for IREC.</p>
-            <div class="project-tags"><span>FEA</span><span>Bolted Joint Design</span><span>CAD(SOLIDWORKS)</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/solid-rocket-motor.html" target="_blank" rel="noopener" aria-label="View Solid Rocket Motor project details">
-            <span class="badge badge-index">06</span>
-            <span class="badge badge-year">2023-2024</span>
-            <img src="images/solid-rocket-motor-thumb.png" alt="Solid Rocket Motor"> 
-          </a>
-          <div class="project-body">
-            <h3>Solid Rocket Motor</h3>
-            <p>O-class solid rocket motor designed for IREC 2024.</p>
-            <div class="project-tags"><span>C++</span><span>Optimization</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/project-7.html" target="_blank" rel="noopener" aria-label="View ___ project details">
-            <span class="badge badge-index">07</span>
-            <span class="badge badge-year">2023-2024</span>
-            <img src="images/project-7.png" alt="Project 7"> 
-          </a>
-          <div class="project-body">
-            <h3>Project 7</h3>
-            <p>Insert description here.</p>
-            <div class="project-tags"><span>C</span><span>Embedded</span></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art" href="projects/project-8.html" target="_blank" rel="noopener" aria-label="View ___ project details">
-            <span class="badge badge-index">08</span>
-            <span class="badge badge-year">2023-2024</span>
-            <img src="images/project-8.png" alt="Project 8"> 
-          </a>
-          <div class="project-body">
-            <h3>Project 8</h3>
-            <p>Insert descriotion HREE</p>
-            <div class="project-tags"><span>MATLAB</span><span>Testing</span></div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="personal" id="personal">
-    <div class="wrap personal-inner">
-      <div class="section-head">
-        <h2>Personal</h2>
-        <p>
-          My name is Cristopher. I'm a first generation college student (and first 
-          gen American) born to Mexican immigrant parents. I grew up working construction
-          with my dad, forming and pouring slabs, sidewalks, driveways, and all other
-          shapes. Working in this industry inspired me to pursue a career on the other
-          side of the blueprint, in engineering. Today, I am just under a year away from 
-          graduating from MIT and looking for my next adventure!
-        </p>
-      </div>
-
-      <dl class="readout">
-        <div><dt>Based in</dt><dd>Norcross, GA</dd></div>
-        <div><dt>Studying</dt><dd>Mechanical Engineering</dd></div>
-        <div><dt>Currently</dt><dd>Senior at MIT</dd></div>
-        <div><dt>Interests</dt><dd>Cycling, plants, taco stands</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap contact-inner">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>Please reach out via email for the fastest response time!</p>
-      </div>
-
-      <ul class="contact-list">
-        <li><span>Email</span><a href="mailto:cristomiranda23@gmail.com">cristomiranda23@gmail.com</a></li>
-        <li><span>GitHub</span><a href="https://github.com/cristopher-264" target="_blank" rel="noopener">github.com/cristopher-264</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/c-ristopher" target="_blank" rel="noopener">linkedin.com/in/c-ristopher</a></li>
-      </ul>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:cristomiranda23@gmail.com">Email</a> ·
+      <a href="https://github.com/cristopher-264">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/c-ristopher">LinkedIn</a>
+    </p>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Cristopher</span>
-    <span>Built with HTML &amp; CSS, hosted on GitHub Pages</span>
-  </div>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
